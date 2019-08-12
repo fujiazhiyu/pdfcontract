@@ -1,0 +1,11 @@
+@media print {
+    @page {
+        @top-left {
+            content: "留学申请合同号： sample";
+        }
+    }
+}
+
+#submit {
+    margin-bottom: 20px;
+}

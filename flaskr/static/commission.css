@@ -1,0 +1,129 @@
+@media print {
+    @font-face {
+        font-family: 'mymicro';
+        src: url('/static/font/msyh.ttf')
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav, aside {
+        display: none;
+    }
+
+    @page {
+        size: A4;
+        margin: 74pt;
+        background-image: url('/static/assets/hygge-logo3.png');
+        background-size: 100.5%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: white;
+        opacity: 1;
+
+        @top-left {
+            /* content: "留学申请合同号："; */
+            vertical-align: bottom;
+            font-size: 8pt;
+            /* 貌似没啥用 */
+            font-family: 'mymicro', serif;
+            opacity: 0.8;
+            margin-bottom: 25pt;
+        }
+
+        @bottom-center {
+            content: "第 "counter(page) " 页";
+            opacity: 0.75;
+            font-size: 7.5pt;
+            vertical-align: middle;
+            font-family: 'mymicro', serif;
+        }
+    }
+
+    .contract-title {
+        font-family: 'mymicro', serif;
+        text-align: center;
+        letter-spacing: 2pt;
+    }
+
+    .content-page {
+        page-break-after: always;
+    }
+
+    .contract-content {
+        padding: 0pt;
+        /* 两端对其 */
+        text-align: justify;
+        font-family: 'mymicro', serif;
+        font-size: 10pt;
+    }
+
+    p {
+        font-size: 9pt;
+        /* 段落间距 */
+        margin: 2pt 0;
+        /* opacity: 0.85; */
+        line-height: 11pt;
+        letter-spacing: 0.8pt;
+        width: 100%;
+        /* orphans: 10; */
+    }
+
+    .p-indent {
+        text-indent: 8pt;
+    }
+
+    h3 {
+        font-size: 10pt;
+        margin: 5pt 0;
+    }
+
+    h4 {
+        margin: 10pt 0 5pt 0;
+        font-size: 9.5pt;
+        font-weight: normal;
+    }
+
+    .contract-content div {
+        margin-bottom: 25pt;
+    }
+
+    #signatures {
+        display: flex;
+        flex-direction: row;
+        margin: 50pt 0 0 0;
+    }
+
+    #part-a {
+        flex: 1;
+    }
+
+    #part-b {
+        flex: 1;
+    }
+
+    .attachment {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    img:first-child {
+        margin-left: -80px;
+    }
+
+    img:last-child {
+        margin-right: -80px;
+    }
+
+    .stamp {
+        background-image: url('/static/assets/hygge-stamp3.png');
+        background-size: 50%;
+        background-position: 50% 20%;
+        background-repeat: no-repeat;
+        height: 180px;
+    }
+}

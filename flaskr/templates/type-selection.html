@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}合同类型{% endblock %}
+
+{% block navbar %}
+<style type="text/css">
+    ol li {
+        margin-bottom: 20px;
+    }
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <p>请问想要哪种合同？</p>
+</nav>
+{% endblock %}
+
+{% block content %}
+<ol>
+    <li><a class="btn btn-default" href="{{ url_for('contract.apply') }}" role="button">学生留学申请合同</a></li>
+    <li><a class="btn btn-default" href="{{ url_for('contract.instruct') }}" role="button">学生作品集指导合同</a></li>
+    <li><a class="btn btn-default" href="{{ url_for('contract.commissioned') }}" role="button">委托老师辅导作品集合同</a></li>
+    <li><a class="btn btn-default" href="{{ url_for('contract.commissioned_apply') }}" role="button">委托老师留学申请合同</a></li>
+</ol>
+{% endblock %}

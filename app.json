@@ -1,0 +1,7 @@
+{
+  "name": "Contracts Generating",
+  "description": "Contracts generating program of archifor design & hygge art",
+  "image": "heroku/python",
+  "repository": "https://git.heroku.com/pdf-contract",
+  "keywords": ["python", "flask" ]
+}

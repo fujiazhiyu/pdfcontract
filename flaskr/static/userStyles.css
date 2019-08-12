@@ -1,0 +1,57 @@
+
+            @media print {
+                @page {
+                    @top-left {
+                        content: " 留学申请委托合同号： CS-20190812-TIANWEN";
+                    }
+                }
+
+                .student-name::before {
+                    content: " 田文 "
+                }
+
+                .apply-district::before {
+                    content: " 美国 ";
+                }
+
+                .apply-subject::before {
+                    content: " 建筑学 ";
+                }
+
+                .apply-degree::before {
+                    content: " 硕士 ";
+                }
+        
+                    .previous-funds::before {
+                        content: " ￥1000 ";
+                    }
+                
+                .total-amount::before {
+                    content: " 贰仟元整(￥2000) ";
+                }
+            
+                .apply-year-season::before {
+                    content: " 2020年秋季 ";
+                }
+            
+                .school-number::before {
+                    content: " 6 ";
+                }
+            
+                .univalent-amount::before {
+                    content: " 200 ";
+                }
+            
+                .fail-year::before {
+                    content: " 2021 ";
+                }
+            
+                .teacher-name::after {
+                    content: " 刘毓柯";
+                }
+            
+            .sign-date::before {
+                content: "  2019 年 08 月 12 日 ";
+            }
+        }
+        
