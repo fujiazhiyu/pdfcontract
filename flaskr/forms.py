@@ -25,7 +25,7 @@ class CommissionForm(ContractForm):
     # 作品集委托辅导
     univalent = IntegerField('单价（老师每课时薪酬）', validators=[InputRequired()], default=200)
     lesson = IntegerField('课时数', validators=[InputRequired()], default=40)
-    previous = IntegerField('前期课时数', validators=[InputRequired()], default=20)
+    previous = FloatField('前期课时数', validators=[InputRequired()], default=20)
     teacher = StringField('老师姓名', validators=[optional()])
     works = IntegerField('作品数量', validators=[InputRequired()], default=4)
 
