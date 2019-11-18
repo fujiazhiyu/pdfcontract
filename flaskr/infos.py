@@ -40,7 +40,8 @@ def commissioned():
         info = {
             "univalent": request.form.get('univalent'),
             "lesson": request.form.get('lesson'),
-            "previous": request.form.get('previous'),
+            "level": request.form.get('level'),
+            "award": request.form.get('award'),
             "teacher": request.form.get('teacher'),
             "works": request.form.get('works')
         }
@@ -165,9 +166,16 @@ def generateCSS(info, contract_prefix):
             if "univalent" in info and "previous" in info:
                 fw.write('''
                     .previous-funds::before {
-                        content: " ''' + str(int(info["previous"]) * int(info["univalent"])) + ''' ";
+                        content: " ''' + str(int(info["award"])) + ''' ";
                     }
                 ''')
+
+        if "level" in info:
+            fw.write('''
+                .teacher-level::before {
+                    content: " ''' + info["level"] + ''' ";
+                }
+            ''')
 
         if "works" in info:
             fw.write('''

@@ -23,15 +23,16 @@ class ApplicationForm(ContractForm):
 
 class CommissionForm(ContractForm):
     # 作品集委托辅导
-    univalent = IntegerField('单价（老师每课时薪酬）', validators=[InputRequired()], default=200)
+    univalent = IntegerField('单价（老师每课时基本薪酬）', validators=[InputRequired()], default=200)
     lesson = IntegerField('课时数', validators=[InputRequired()], default=40)
-    previous = FloatField('前期课时数', validators=[InputRequired()], default=20)
+    level = StringField('教师级别', validators=[InputRequired()], default="辅导老师I级")
+    award = FloatField('奖金', validators=[InputRequired()], default=20)
     teacher = StringField('老师姓名', validators=[optional()])
     works = IntegerField('作品数量', validators=[InputRequired()], default=4)
 
-    def validate_previous(form, field):
-        if form.lesson.data < field.data:
-            raise ValidationError("前期课时数超额!")
+    # def validate_previous(form, field):
+    #     if form.lesson.data < field.data:
+    #         raise ValidationError("前期课时数超额!")
 
 
 class InstructionForm(ContractForm):

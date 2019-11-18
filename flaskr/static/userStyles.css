@@ -2,16 +2,16 @@
             @media print {
                 @page {
                     @top-left {
-                        content: " 留学申请委托合同号： CS-20190812-TIANWEN";
+                        content: " 留学作品集辅导委托合同号： CT-20191118-ZHANGYIFEI";
                     }
                 }
 
                 .student-name::before {
-                    content: " 田文 "
+                    content: " 张熠菲 "
                 }
 
                 .apply-district::before {
-                    content: " 美国 ";
+                    content: " 英国 ";
                 }
 
                 .apply-subject::before {
@@ -22,36 +22,32 @@
                     content: " 硕士 ";
                 }
         
-                    .previous-funds::before {
-                        content: " ￥1000 ";
-                    }
-                
-                .total-amount::before {
-                    content: " 贰仟元整(￥2000) ";
-                }
-            
-                .apply-year-season::before {
-                    content: " 2020年秋季 ";
-                }
-            
-                .school-number::before {
-                    content: " 6 ";
-                }
-            
                 .univalent-amount::before {
                     content: " 200 ";
                 }
             
-                .fail-year::before {
-                    content: " 2021 ";
+                .instruct-lesson-hours::before {
+                    content: " 10 ";
+                }
+
+                .half-lesson-hours::before {
+                    content: " 5 ";
+                }
+            
+                .teacher-level::before {
+                    content: " 辅导老师I级 ";
+                }
+            
+                .works-number::before {
+                    content: " 1 ";
                 }
             
                 .teacher-name::after {
-                    content: " 刘毓柯";
+                    content: " 刘依心";
                 }
             
             .sign-date::before {
-                content: "  2019 年 08 月 12 日 ";
+                content: "  2019 年 11 月 18 日 ";
             }
         }
         
