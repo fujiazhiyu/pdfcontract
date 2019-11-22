@@ -26,7 +26,7 @@ class CommissionForm(ContractForm):
     univalent = IntegerField('单价（老师每课时基本薪酬）', validators=[InputRequired()], default=200)
     lesson = IntegerField('课时数', validators=[InputRequired()], default=40)
     level = StringField('教师级别', validators=[InputRequired()], default="辅导老师I级")
-    award = FloatField('奖金', validators=[InputRequired()], default=20)
+    award = IntegerField('奖金', validators=[InputRequired()], default=20)
     teacher = StringField('老师姓名', validators=[optional()])
     works = IntegerField('作品数量', validators=[InputRequired()], default=4)
 

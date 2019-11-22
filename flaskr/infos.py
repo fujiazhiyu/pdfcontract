@@ -163,7 +163,7 @@ def generateCSS(info, contract_prefix):
                     content: " ''' + str(int(info["lesson"]) // 2) + ''' ";
                 }
             ''')
-            if "univalent" in info and "previous" in info:
+            if "univalent" in info and "award" in info:
                 fw.write('''
                     .previous-funds::before {
                         content: " ''' + str(int(info["award"])) + ''' ";

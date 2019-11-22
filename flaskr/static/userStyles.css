@@ -2,7 +2,7 @@
             @media print {
                 @page {
                     @top-left {
-                        content: " 留学作品集辅导委托合同号： CT-20191118-ZHANGYIFEI";
+                        content: " 留学作品集辅导委托合同号： CT-20191122-ZHANGYIFEI";
                     }
                 }
 
@@ -34,6 +34,10 @@
                     content: " 5 ";
                 }
             
+                    .previous-funds::before {
+                        content: " 50 ";
+                    }
+                
                 .teacher-level::before {
                     content: " 辅导老师I级 ";
                 }
@@ -47,7 +51,7 @@
                 }
             
             .sign-date::before {
-                content: "  2019 年 11 月 18 日 ";
+                content: "  2019 年 11 月 22 日 ";
             }
         }
         
