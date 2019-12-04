@@ -2,12 +2,12 @@
             @media print {
                 @page {
                     @top-left {
-                        content: " 留学作品集辅导委托合同号： CT-20191122-ZHANGYIFEI";
+                        content: " 留学作品集辅导委托合同号： CT-20191204-TANGZHITING";
                     }
                 }
 
                 .student-name::before {
-                    content: " 张熠菲 "
+                    content: " 唐知亭 "
                 }
 
                 .apply-district::before {
@@ -27,15 +27,15 @@
                 }
             
                 .instruct-lesson-hours::before {
-                    content: " 10 ";
+                    content: " 40 ";
                 }
 
                 .half-lesson-hours::before {
-                    content: " 5 ";
+                    content: " 20 ";
                 }
             
                     .previous-funds::before {
-                        content: " 50 ";
+                        content: " 20 ";
                     }
                 
                 .teacher-level::before {
@@ -43,15 +43,15 @@
                 }
             
                 .works-number::before {
-                    content: " 1 ";
+                    content: " 4 ";
                 }
             
                 .teacher-name::after {
-                    content: " 刘依心";
+                    content: " 崔雯楠";
                 }
             
             .sign-date::before {
-                content: "  2019 年 11 月 22 日 ";
+                content: "  2019 年 12 月 04 日 ";
             }
         }
         

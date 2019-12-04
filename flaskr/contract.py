@@ -34,7 +34,11 @@ def application(contract_title):
 @bp.route('/commission-contract/<contract_title>', methods=['GET', 'POST'])
 def commission(contract_title):
     html = render_template('commissioned_contract.html')
-    pdf_file = render_contract(html).write_pdf()
+    commission_document = render_contract(html)
+    teacherlevel_document = teacherlevel_attachment()
+    # 添加附件
+    all_pages = [p for doc in [commission_document, teacherlevel_document] for p in doc.pages]
+    pdf_file = commission_document.copy(all_pages).write_pdf()
     return contract_response(pdf_file, contract_title)
 
 
@@ -66,6 +70,11 @@ def hygge_contract(contract_title):
     html = render_template('hygge_contract.html')
     cssfile = CSS(url_for("static", filename='hyggeadd.css'))
     return HTML(string=html).render(stylesheets=[cssfile])
+
+
+def teacherlevel_attachment():
+    html = render_template('teacherlevel.html')
+    return HTML(string=html).render()
 
 
 def render_contract(html):
