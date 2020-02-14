@@ -63,10 +63,11 @@ def application_commission(contract_title):
 
 # 生成灰格教育咨询合同（单页那个）的css文件
 def hygge_contract(contract_title):
+    sdf = str(len(Pinyin().get_pinyin(contract_title.split('-')[0], '').upper()))
     # 页眉和日期
     with open('flaskr/static/hyggeadd.css', 'w') as hygge_css:
         hygge_css.write("@media print { @page { @top-left { content: '咨询服务合同号： " + Pinyin().get_initials(contract_title.split("-")[0], '') + time.strftime(
-            "%Y%m%d", time.localtime()) + "'}} " + ".sign-date::before { content: '" + time.strftime(" %Y 年 %m 月 %d 日", time.localtime()) + "'; }" + ".contract-series::before { content: 'T-" + time.strftime("%Y%m%d", time.localtime()) + "-" + len(Pinyin().get_pinyin(contract_title.split('-')[0], '').upper()) + "'}")
+            "%Y%m%d", time.localtime()) + "'}} " + ".sign-date::before { content: '" + time.strftime(" %Y 年 %m 月 %d 日", time.localtime()) + "'; }" + ".contract-series::before { content: 'T-" + time.strftime("%Y%m%d", time.localtime()) + "-" + sdf + "'}")
     html = render_template('hygge_contract.html')
     cssfile = CSS(url_for("static", filename='hyggeadd.css'))
     return HTML(string=html).render(stylesheets=[cssfile])
