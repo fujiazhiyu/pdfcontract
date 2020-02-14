@@ -24,4 +24,4 @@ webencodings==0.5.1
 Werkzeug==0.15.4
 WTForms==2.2.1
 xpinyin==0.5.6
-gunicorn==19.4.5
+gunicorn==19.5.0
